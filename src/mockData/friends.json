@@ -1,0 +1,32 @@
+[
+  {
+    "avatar": "./img/friends/gintoki.jpg",
+    "name": "Sakato Gintoki",
+    "isOnline": true,
+    "id": 1812
+  },
+  {
+    "avatar": "./img/friends/yoroichi.jpg",
+    "name": "Yoroichi",
+    "isOnline": false,
+    "id": 1137
+  },
+  {
+    "avatar": "./img/friends/re-l.jpg",
+    "name": "Re L Mayer",
+    "isOnline": true,
+    "id": 1213
+  },
+  {
+    "avatar": "./img/friends/cloud.jpg",
+    "name": "Cloud Strife",
+    "isOnline": true,
+    "id": 1714
+  },
+  {
+    "avatar": "./img/friends/natsu.jpg",
+    "name": "Natsu Dragneel",
+    "isOnline": false,
+    "id": 1284
+  }
+]

@@ -1,0 +1,39 @@
+.transactions-wrapper { //for solve problem with border-radius in table
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.transaction-history{
+    
+    text-align: center;
+    width: 875px;
+    border-collapse: collapse;
+    & td, & th {
+        width: calc(100% / 3);
+        padding: 20px 0;
+    }
+    & thead {
+        & tr {
+            
+            color: #fff;
+            background-color: #00bcd4;
+            text-transform: uppercase;
+        }
+        
+        & th:not(:nth-child(3n)) {
+            border-right: solid 1px #fff;
+        }
+    }
+
+    & tbody {
+        & tr:nth-child(even){
+            color: #727d87;
+            background-color: #ecf2f3;
+        }
+
+        & td {
+            border: solid 1px #e0e6e7;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+$mainTextColor: #768696;
+$textDark: #122236;
+$boderColor:  #d8e0ea;
+$bg-light: #f3f6f9;
+
+
+
+.card {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    width: 250px;
+    color: $mainTextColor;
+    border: 1px solid $boderColor;
+    border-radius: 5px;
+}
+.card__photo {
+    display: block;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    margin: 30px auto;
+}
+
+.card__name {
+    font-weight: 700;
+    font-size: 18px;
+    color: $textDark;
+    margin-bottom: 15px;
+}
+.card__tag, .card__tg-link:visited{
+    margin-bottom: 15px;
+}
+.card__location {
+    margin-bottom: 30px;
+}
+
+.card__info-list {
+    list-style: none;
+    display: flex;
+    background-color: $bg-light;
+    margin: 0;
+    padding: 0;
+
+}
+.info-list__item{    
+    &:not(:last-child){
+        border-right: 1px solid $boderColor;
+    }
+    
+    width: calc(100% / 3);
+}
+.info-list__item-placeholder {
+    font-size: 12px;
+    margin-bottom: 9px;
+}
+.info-list__item-value {
+    font-size: 14px;
+    color: $textDark;
+}
