@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import PropTypes from 'prop-types'; 
 import './SocialProfile.scss';
 
 export default function SocialProfile (props){
     return (
         <div className="card">
-            <img src={props.imgSrc} alt={props.name} className="card__photo" width="128" height="128"/>
+            <img src={process.env.PUBLIC_URL + props.imgSrc} alt={props.name} className="card__photo" width="128" height="128"/>
             <div className="card__meta">
                 <h3 className="card__name">{props.name}</h3>
                 <p className="card__tag">@{props.tag}</p>

@@ -1,7 +1,7 @@
-import SocialProfile from './components/social-profile/SocialProfile';
-import Statistics from './components/statistics/Statistics'
-import FriendList from './components/friend-list/FrienList';
-import Transactions from './components/transactions/Transactions';
+import SocialProfile from './components/social-profile';
+import Statistics from './components/statistics'
+import FriendList from './components/friend-list';
+import Transactions from './components/transactions';
 
 import friends from './mockData/friends.json';
 import statistic from './mockData/statistical-data.json';
@@ -20,7 +20,7 @@ function App() {
     <div className="container">
       <h2>Task 1. Social profile</h2>
       <SocialProfile
-        imgSrc = "./img/TimothyGrant.jpg" 
+        imgSrc = "/img/TimothyGrant.jpg" 
         name="Timothy Grant"
         tag ="tgrant"
         location="Sao Paulo, Brasil"

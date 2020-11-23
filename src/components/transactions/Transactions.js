@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
+import TransactRecord from './TransactRecord';
 import './Transactions.scss';
 
-function createJsxMarkup(arr){
-    return arr.map(el => 
-        <tr key={el.id}>
-            <td>{el.type}</td>
-            <td>{el.amount}</td>
-            <td>{el.currency}</td>
-        </tr>
-        );
-}
 
-export default function Transactions(props){
-    const markup = createJsxMarkup(props.transactions);
+
+export default function Transactions({transactions}){
+    const markup = transactions.map(el => {
+            const {id, ...rest } = el;
+
+            return  <TransactRecord key={id} {...rest} />
+        })
+
     return (
         <div className="transactions-wrapper">
             <table className="transaction-history">

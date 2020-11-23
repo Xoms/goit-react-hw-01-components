@@ -2,28 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types'; 
 import './Statistics.scss';
 
-function formOutputArr(arr){
-    if (arr.length%4) {  //check for 4 in row
-        while(arr.length%4){
+export default function Statistics({title, stats}){
+
+    if (stats.length%4) {  //check for 4 in row
+        while(stats.length%4){
             let mockObj = {
                 "id": Date.now() + Math.random() + '', 
                 "label": "", 
                 "percentage": 0
             }
-            arr.push(mockObj)
+            stats.push(mockObj)
         }
     }
-    return arr.map(el => <li className="stat-list__item" key={el.id}>
-        <span className="stat-list__item-label">{el.label}</span>
-        {el.percentage !== 0 && <span className="stat-list__item-percentage"> {el.percentage}%</span>}
-    </li>);
-}
 
-export default function Statistics(props){
-    const outputData = formOutputArr(props.stats) 
+    const outputData = stats.map(el => {
+            return ( 
+            <li className="stat-list__item" key={el.id}>
+                <span className="stat-list__item-label">{el.label}</span>
+                {el.percentage !== 0 && <span className="stat-list__item-percentage"> {el.percentage}%</span>}
+            </li>
+            )
+        }); 
+
+
     return (
         <section className="statistics">
-        {props.title && <h2 className="statistics__title">{props.title}</h2>}
+        {!!title && <h2 className="statistics__title">{title}</h2>} {/*Это чтоб не рендерился h1 совсем, если ничего не передано*/ }
 
         <ul className="stat-list">
             {outputData}
